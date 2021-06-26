@@ -1,6 +1,12 @@
 # PacGhost_v1
 A variation of the classic PacMan game. 
 
+![image](https://user-images.githubusercontent.com/65459827/123515742-4b011780-d6cb-11eb-9916-6ece23f16b52.png)
+![image](https://user-images.githubusercontent.com/65459827/123515830-b0ed9f00-d6cb-11eb-875a-4d1479e54dec.png)
+![image](https://user-images.githubusercontent.com/65459827/123515759-61a76e80-d6cb-11eb-8828-3c33e693f0e4.png)
+![image](https://user-images.githubusercontent.com/65459827/123515816-9adfde80-d6cb-11eb-8494-f015c9cb8147.png)
+
+
 ## Enemy specifications ** 
 Real enemies can pass through maze walls. Player dies upon collision with real enemies.
 Fake enemies cannot pass through maze walls. Player does not die upon collision with fake enemies. (Player can push fake enemies around.)
@@ -21,3 +27,5 @@ Cause of invisible walls is presently unknown.
 Player only has 1 life.
 Option to restart or quit game available after Player dies, or in-game.
 Fake Enemies and Real Enemies are deliberately set to be the same sprite for additional challenge.
+
+
