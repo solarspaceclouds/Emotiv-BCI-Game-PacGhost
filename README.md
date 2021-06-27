@@ -3,9 +3,8 @@ A variation of the classic PacMan game.
 
 ![image](https://user-images.githubusercontent.com/65459827/123516055-cb744800-d6cc-11eb-855e-e4bfc3e20ba6.png)
 ![image](https://user-images.githubusercontent.com/65459827/123515830-b0ed9f00-d6cb-11eb-875a-4d1479e54dec.png)
-![image](https://user-images.githubusercontent.com/65459827/123516073-ddee8180-d6cc-11eb-8d2b-3302846515b8.png)
-![image](https://user-images.githubusercontent.com/65459827/123515816-9adfde80-d6cb-11eb-8494-f015c9cb8147.png)
-
+![image](https://user-images.githubusercontent.com/65459827/123543949-8bbc6780-d783-11eb-804f-435f30a9576a.png)
+![image](https://user-images.githubusercontent.com/65459827/123543973-a393eb80-d783-11eb-92c1-1fb226a54c43.png)
 
 ## Enemy specifications ** 
 Real enemies can pass through maze walls. Player dies upon collision with real enemies.
