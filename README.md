@@ -7,7 +7,7 @@ A variation of the classic PacMan game.
 ![image](https://user-images.githubusercontent.com/65459827/123543973-a393eb80-d783-11eb-92c1-1fb226a54c43.png)
 
 ## Enemy specifications ** 
-Real enemies can pass through maze walls. Player dies upon collision with real enemies.
+Real enemies can pass through maze walls. Player dies upon collision with real enemies. (Ghosts)
 
 Fake enemies cannot pass through maze walls. Player does not die upon collision with fake enemies. (Player can push fake enemies around.)
 
