@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 public class EndGameMessage : MonoBehaviour
 {
@@ -12,13 +10,13 @@ public class EndGameMessage : MonoBehaviour
     }
 
     // Update is called once per frame
-    
+
     private void Update()
     {
         if (ScoreTextScript.gameWon == true)
         {
             Debug.Log("Won");
-            text.text =  "You Won! Well done!";
+            text.text = "You Won! Well done!";
         }
         else if (ScoreTextScript.gameWon == false)
         {

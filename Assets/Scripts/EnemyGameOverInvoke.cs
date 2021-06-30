@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class EnemyGameOverInvoke : MonoBehaviour
 {
-    public Text text;
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.CompareTag("Player"))

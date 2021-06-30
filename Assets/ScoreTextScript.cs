@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ScoreTextScript : MonoBehaviour
 {
@@ -24,11 +24,6 @@ public class ScoreTextScript : MonoBehaviour
         Debug.Log("CoinUpdate");
         CheckWin();
     }
-    private void WinGame()
-    {
-        gameWon = true;
-        //SceneManager.LoadScene("Win Scene");
-    }
 
     private void CheckWin()
     {
@@ -37,7 +32,6 @@ public class ScoreTextScript : MonoBehaviour
             //Debug.Log("Win");
             gameWon = true;
             SceneManager.LoadScene("Game Over");
-
         }
         else
         {
@@ -45,16 +39,4 @@ public class ScoreTextScript : MonoBehaviour
         }
     }
 
-
-    //void CheckPelletsConsumed()
-    //{
-    //    if (PlayerPlaying)
-    //    {
-    //        // Player is playing
-    //        if (text == 300)
-    //        {
-    //            PlayerWin();
-    //        }
-    //    }
-    //}
 }

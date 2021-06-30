@@ -1,11 +1,24 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEditor;
 public class MainMenuController : MonoBehaviour
 {
-    // Start is called before the first frame update
-   public void PlayGame()
+    public GameObject Panel;
+
+    public void Start()
+    {
+        Panel.SetActive(false);
+    }
+    public void OpenPanel()
+    {
+        if (Panel != null)
+        {
+            bool isActive = Panel.activeSelf;
+            Panel.SetActive(!isActive);
+        }
+
+    }
+    public void PlayGame()
     {
         SceneManager.LoadScene("Game");
         //SceneManager.LoadScene("MainMenu");
@@ -18,14 +31,5 @@ public class MainMenuController : MonoBehaviour
         {
             UnityEditor.EditorApplication.isPlaying = false;
         }
-    }
-    public void SelectCharacter1()
-    {
-
-    }
-
-    public void SelectCharacter2()
-    {
-
     }
 }
