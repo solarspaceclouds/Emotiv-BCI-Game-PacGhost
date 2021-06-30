@@ -9,5 +9,6 @@ public class ReturnToMainMenu : MonoBehaviour
     public void MainMenuButton()
     {
         SceneManager.LoadScene("MainMenu");
+        ScoreTextScript.coinAmount = 0;
     }
 }
