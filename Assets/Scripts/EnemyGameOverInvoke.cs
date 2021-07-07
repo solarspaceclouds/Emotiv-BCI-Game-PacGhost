@@ -13,4 +13,17 @@ public class EnemyGameOverInvoke : MonoBehaviour
             SceneManager.LoadScene("Game Over");
         }
     }
+
+    private void FixedUpdate()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+            Debug.Log("Escaped!");
+            //if (Application.isEditor)
+            //{
+            //    UnityEditor.EditorApplication.isPlaying = false;
+            //}
+        }
+    }
 }

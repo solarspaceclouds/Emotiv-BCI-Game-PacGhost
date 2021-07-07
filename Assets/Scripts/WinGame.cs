@@ -1,11 +1,11 @@
-﻿using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿//using UnityEngine;
+//using UnityEngine.SceneManagement;
 
-public class WinGame : MonoBehaviour
-{
-    public void WinGameCode()
-    {
-        SceneManager.LoadScene("Win Scene");
-        ScoreTextScript.coinAmount = 0;
-    }
-}
+//public class WinGame : MonoBehaviour
+//{
+//    public void WinGameCode()
+//    {
+//        SceneManager.LoadScene("Win Scene");
+//        ScoreTextScript.coinAmount = 0;
+//    }
+//}

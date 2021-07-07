@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 //using UnityEditor;
-public class MainMenuController : MonoBehaviour
+public class MainMenuController2 : MonoBehaviour
 {
     public GameObject Panel;
 
@@ -33,5 +33,18 @@ public class MainMenuController : MonoBehaviour
         //{
         //    UnityEditor.EditorApplication.isPlaying = false;
         //}
+    }
+
+    private void FixedUpdate()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+            Debug.Log("Escaped!");
+            //if (Application.isEditor)
+            //{
+            //    UnityEditor.EditorApplication.isPlaying = false;
+            //}
+        }
     }
 }

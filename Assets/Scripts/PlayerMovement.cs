@@ -7,11 +7,11 @@ public class PlayerMovement : MonoBehaviour
 {
     public static bool gameOver = false;
 
-    public float speed = 5f;
+    public float speed = 4f;
     // Start is called before the first frame update
     //private string WALL_TAG = "Wall";
-    private string ENEMY_TAG = "Enemy";
-    private string FOOD_TAG = "Food";
+    //private string ENEMY_TAG = "Enemy";
+    //private string FOOD_TAG = "Food";
 
 
     [SerializeField]
