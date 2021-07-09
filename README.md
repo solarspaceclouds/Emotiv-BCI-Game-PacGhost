@@ -6,6 +6,8 @@ A variation of the classic PacMan game.
 ![image](https://user-images.githubusercontent.com/65459827/123543949-8bbc6780-d783-11eb-804f-435f30a9576a.png)
 ![image](https://user-images.githubusercontent.com/65459827/123543973-a393eb80-d783-11eb-92c1-1fb226a54c43.png)
 
+Read the instructions before starting the game.
+
 ## Enemy specifications ** 
 Real enemies can pass through maze walls. Player dies upon collision with real enemies. (Ghosts)
 
@@ -18,19 +20,11 @@ Blue coins: 3 points each.
 
 Total possible points/Points required to win game: 300
 
-### Bugs **
-Invisible walls might appear at random axes (a horizontal or vertical strip across the scene) which causes the player to be unable to move beyond a certain x(horizontal) or y(vertical) direction after a certain point. 
-
-Invisible walls which form tend to disappear on their own after a while. 
-
-Cause of invisible walls is presently unknown. 
-### Current solution: Player to walk around the areas of the maze further from the side where the invisible walls seem to appear, and periodically try different paths to get to the original intended destination/coins after a while.
-
 
 ### Additional details
 Player only has 1 life.
 
-Option to restart or quit game available after Player dies, or in-game.
+Additional Quit option: Press Esc.
 
 Fake Enemies and Real Enemies are deliberately set to be the same sprite for additional challenge.
 
