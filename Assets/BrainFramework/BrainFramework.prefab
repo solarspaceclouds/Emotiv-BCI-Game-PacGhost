@@ -57,7 +57,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   socketUrl: wss://localhost:6868
-  clientId: o3LBXxpibBDOqaffQVw85Ei1PKJEpUjDNKCWJUk2
-  clientSecret: 
-  headsetId: EPOCPLUS-3B9AEBB0
-  Profile: TestV2
+  clientId: kA3HNG0kys3QhmGy8v2Ayirg66df6OwXINX8Akuj
+  clientSecret: FyTNi5izoXI8hv9UAQnbEg27aAA9oSjqzdgLXzrVJ0hhKpwtQssCSAMnE1tL9sK1x0LBdKk2ucrywbeaP9ZL6xbw805kGVmO2e3qOFrKLbP8ahDpVsbIGXMlS91OOnVm
+  headsetId: EPOCPLUS-3B9ADD0E
+  Profile: may

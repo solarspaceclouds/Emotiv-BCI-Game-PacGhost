@@ -11,7 +11,7 @@ public class BallController : MonoBehaviour
 
     void Start()
     {
-
+        Debug.Log("BallControllerScript is Running! :D");
         // ---------- BRAIN FRAMEWORK-----------
         // 1. Connect to EPOC Script
         EPOC = BrainFramework.GetComponent<BrainFramework>();
@@ -28,7 +28,7 @@ public class BallController : MonoBehaviour
     // EPOC IS READY
     void Ready()
     {
-        Debug.Log("EPOC Ready!");
+        Debug.Log("Ball EPOC Ready!");
 
 
         // START STREAM
@@ -73,6 +73,7 @@ public class BallController : MonoBehaviour
     // DATA STREAM
     void Stream()
     {
+        Debug.Log("BallStream");
         Debug.Log($"command: { EPOC.BRAIN.command } | eyeAction: { EPOC.BRAIN.eyeAction } | upperFaceAction: { EPOC.BRAIN.upperFaceAction } | lowerFaceAction: { EPOC.BRAIN.lowerFaceAction }");
     }
 
@@ -80,10 +81,12 @@ public class BallController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        Debug.Log("BallFixedUpdate");
         // BALL MOVEMENT EXAMPLE
         Vector3 movement = new Vector3(0.0f, 0.0f, 0.0f);
 
-        if (EPOC.BRAIN.command == "push")
+        //if (EPOC.BRAIN.command == "neutral")
+        if (EPOC.BRAIN.lowerFaceAction == "smile") //push
         {
             movement = new Vector3(0.0f, 0.0f, 1.0f);
         }
@@ -99,7 +102,7 @@ public class BallController : MonoBehaviour
         {
             movement = new Vector3(1.0f, 0.0f, 0.0f);
         }
-
+        Debug.Log("EPOCBRAINCOMMAND: " + EPOC.BRAIN.command);
 
         Ball.AddForce(movement);
     }

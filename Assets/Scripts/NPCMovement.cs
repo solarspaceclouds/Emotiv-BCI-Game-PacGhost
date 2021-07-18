@@ -6,8 +6,7 @@ public class NPCMovement : MonoBehaviour
 {
 
     // to add a bit of random movements.. 
-    [SerializeField]
-    private float moveForce = 2f;
+    public float moveForce = 2f;
     
     [SerializeField]
     private float jumpForce = 11f;

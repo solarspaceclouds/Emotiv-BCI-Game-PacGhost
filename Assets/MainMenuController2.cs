@@ -7,9 +7,12 @@ public class MainMenuController2 : MonoBehaviour
 {
     public GameObject Panel;
 
+    //public Toggle MultiplayerToggle;
+    //public GameObject DifficultyToggles;
     public void Start()
     {
         Panel.SetActive(false);
+        //DifficultyToggles.transform.GetChild((int)Difficulties.Difficulty).GetComponent<Toggle>().isOn = true;
     }
     public void OpenPanel()
     {
@@ -47,4 +50,22 @@ public class MainMenuController2 : MonoBehaviour
             //}
         }
     }
+
+    // region Difficulty
+    //public void SetBasicDifficulty(bool isOn)
+    //{
+    //    if (isOn)
+    //    {
+    //        Difficulties.Difficulty = Difficulties.DifficultyLevels.Basic;
+    //    }
+    //}
+
+    //public void SetExpertDifficulty(bool isOn)
+    //{
+    //    if(isOn)
+    //    {
+    //        Difficulties.Difficulty = Difficulties.DifficultyLevels.Expert;
+    //    }
+    //}
 }
+
