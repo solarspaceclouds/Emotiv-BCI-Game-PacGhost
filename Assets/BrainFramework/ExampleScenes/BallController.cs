@@ -74,14 +74,16 @@ public class BallController : MonoBehaviour
     void Stream()
     {
         Debug.Log("BallStream");
-        Debug.Log($"command: { EPOC.BRAIN.command } | eyeAction: { EPOC.BRAIN.eyeAction } | upperFaceAction: { EPOC.BRAIN.upperFaceAction } | lowerFaceAction: { EPOC.BRAIN.lowerFaceAction }");
+        Debug.Log($"command: { EPOC.BRAIN.command } | eyeAction: { EPOC.BRAIN.eyeAction } | upperFaceAction: { EPOC.BRAIN.upperFaceAction } | lowerFaceAction: { EPOC.BRAIN.lowerFaceAction } | metrics: {EPOC.BRAIN.metric}");
     }
 
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        Debug.Log("BallFixedUpdate");
+
+
+        Debug.Log("BallUpdate");
         // BALL MOVEMENT EXAMPLE
         Vector3 movement = new Vector3(0.0f, 0.0f, 0.0f);
 
@@ -102,7 +104,7 @@ public class BallController : MonoBehaviour
         {
             movement = new Vector3(1.0f, 0.0f, 0.0f);
         }
-        Debug.Log("EPOCBRAINCOMMAND: " + EPOC.BRAIN.command);
+        Debug.Log("EPOCBRAINMETRIC: " + EPOC.BRAIN.metric);
 
         Ball.AddForce(movement);
     }

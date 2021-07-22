@@ -9,21 +9,25 @@ public class ScoreTextScript : MonoBehaviour
 
     // Start is called before the first frame update
     public Text text;
+    //public string playerName = BrainFramework.Profile;
+    //public Text cloneScoreText;
 
     public static int gameWon=2;
 
     public static int coinAmount;
+    public int finalScore;
     void Start()
     {
-        text = GetComponent<Text>();
     }
 
     // Update is called once per frame
     void Update()
     {
         // update score according to coin amount
-        text.text = coinAmount.ToString();
-        //CheckWin();
+        text.text = "Player: " + BrainFramework.Profile + "\nScore: " + coinAmount;
+        PlayerPrefs.SetInt("finalScore", coinAmount);
+        PlayerPrefs.Save();
+
     }
     
     private void FixedUpdate()
@@ -37,7 +41,6 @@ public class ScoreTextScript : MonoBehaviour
             //    UnityEditor.EditorApplication.isPlaying = false;
             //}
         }
-        //CheckWin();
     }
 
 }

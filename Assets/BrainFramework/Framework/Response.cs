@@ -13,6 +13,7 @@ public class RES_LOG_CLASS
     public string[] com;
     public string[] fac;
     public string[] sys;
+    public string[] met; //added performance metrics
     public string sid;
     public string time;
 }
@@ -26,6 +27,7 @@ public class RES_CLASS
     public string[] com;
     public string[] fac;
     public string[] sys;
+    public string[] met; //added performance metrics
     public string sid;
     public string time;
 }

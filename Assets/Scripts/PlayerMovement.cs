@@ -20,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField]
     private float minX, maxX, minY, maxY;
+
+    public int finalScore2;
     void Start()
     {
         //speedUpper = GameObject.Find("SpeedController");
@@ -75,9 +77,10 @@ public class PlayerMovement : MonoBehaviour
         {
             //Debug.Log("Win");
             ScoreTextScript.gameWon = 1;
+            finalScore2 = ScoreTextScript.coinAmount;
             SceneManager.LoadScene("Game Over");
         }
-        //else
+        //else //unnecessary
         //{
         //    // Lost
         //    gameWon = 2;
