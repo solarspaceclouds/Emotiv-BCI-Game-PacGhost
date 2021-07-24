@@ -15,7 +15,6 @@ public class CoinScript : MonoBehaviour
             ScoreTextScript.coinAmount += pelletValue;
             pelletTotal++;
             Destroy(gameObject);
-            SoundManager.sndMan.PlayCoinSound();
         }
             
     }

@@ -6,11 +6,10 @@ using UnityEngine.UI;
 
 public class ScoreTextScript : MonoBehaviour
 {
-
     // Start is called before the first frame update
     public Text text;
 
-    public static int gameWon=2;
+    public static int gameWon;
 
     public static int coinAmount;
     void Start()
@@ -21,11 +20,24 @@ public class ScoreTextScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // update score according to coin amount
         text.text = coinAmount.ToString();
-        //CheckWin();
     }
-    
+
+    private void CheckWin()
+    {
+        if (int.Parse(text.text) == 300)
+        {
+            //Debug.Log("Win");
+            gameWon = 1;
+            SceneManager.LoadScene("Game Over");
+            
+        }
+        else
+        {
+            // Lost
+            gameWon = 2;
+        }
+    }
     private void FixedUpdate()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -37,7 +49,10 @@ public class ScoreTextScript : MonoBehaviour
             //    UnityEditor.EditorApplication.isPlaying = false;
             //}
         }
-        //CheckWin();
+        CheckWin();
+
+        
+        
     }
 
 }
