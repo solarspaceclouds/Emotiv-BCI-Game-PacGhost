@@ -6,12 +6,10 @@ using UnityEngine.UI;
 
 public class EnemyGameOverInvoke : MonoBehaviour
 {
-    public int finalScore1;
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.CompareTag("Player"))
         {
-            finalScore1 = ScoreTextScript.coinAmount;
             SceneManager.LoadScene("Game Over");
         }
     }
