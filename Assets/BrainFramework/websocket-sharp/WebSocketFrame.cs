@@ -567,7 +567,7 @@ Extended Payload Length: {7}
 
           var frame = read (header, stream, unmask);
           if (completed != null)
-            completed (frame);
+                completed (frame);
         },
         error);
     }

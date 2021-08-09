@@ -9,9 +9,19 @@ public class BallController : MonoBehaviour
 
     private Rigidbody Ball;
 
+    public int neutralCount1 = 0;
+    public int clenchCount1 = 0;
+    public int furrowCount1 = 0;
+    public int smileCount1 = 0;
+    public int stressCount1 = 0;
+    public int exciteCount1 = 0;
+    public int relaxCount1 = 0;
+    public int longExciteCount1 = 0;
+
     void Start()
     {
-
+        Debug.Log("BallControllerScript is Running! :D");
+        Debug.Log("");
         // ---------- BRAIN FRAMEWORK-----------
         // 1. Connect to EPOC Script
         EPOC = BrainFramework.GetComponent<BrainFramework>();
@@ -28,7 +38,7 @@ public class BallController : MonoBehaviour
     // EPOC IS READY
     void Ready()
     {
-        Debug.Log("EPOC Ready!");
+        Debug.Log("Ball EPOC Ready!");
 
 
         // START STREAM
@@ -73,19 +83,32 @@ public class BallController : MonoBehaviour
     // DATA STREAM
     void Stream()
     {
-        Debug.Log($"command: { EPOC.BRAIN.command } | eyeAction: { EPOC.BRAIN.eyeAction } | upperFaceAction: { EPOC.BRAIN.upperFaceAction } | lowerFaceAction: { EPOC.BRAIN.lowerFaceAction }");
+        Debug.Log("BallStream");
+        Debug.Log($"command: { EPOC.BRAIN.command } | eyeAction: { EPOC.BRAIN.eyeAction } | upperFaceAction: { EPOC.BRAIN.upperFaceAction } | lowerFaceAction: { EPOC.BRAIN.lowerFaceAction } ");//| metrics: {EPOC.BRAIN.metric}
     }
+    //void Try()
+    //{
+    //    Debug.Log("Metric Length: " + EPOC.BRAIN.metric.Length);
+    //    for (int i = 0; i < EPOC.BRAIN.metric.Length; i++)
+    //    {
+    //        Debug.Log("EPOC Metric " + i + ": " + EPOC.BRAIN.metric[i]);
+    //    }
+    //}
 
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        Debug.Log("BallFixedUpdate");
         // BALL MOVEMENT EXAMPLE
         Vector3 movement = new Vector3(0.0f, 0.0f, 0.0f);
 
-        if (EPOC.BRAIN.command == "push")
+        //if (EPOC.BRAIN.command == "neutral")
+        if (EPOC.BRAIN.lowerFaceAction == "smile") //push
         {
             movement = new Vector3(0.0f, 0.0f, 1.0f);
+            smileCount1++;
+            Debug.Log("smile");
         }
         if (EPOC.BRAIN.command == "pull")
         {
@@ -99,6 +122,42 @@ public class BallController : MonoBehaviour
         {
             movement = new Vector3(1.0f, 0.0f, 0.0f);
         }
+
+        //Debug.Log("EPOCBRAINMETRIC: " + EPOC.BRAIN.metric);
+
+        //
+        if (EPOC.BRAIN.command == "neutral")
+        {
+            Debug.Log("Neutral!");
+            //activate player speed up script gameobject
+            neutralCount1++;
+        }
+        if (EPOC.BRAIN.lowerFaceAction == "clench")
+        {
+            Debug.Log("Clench");
+            clenchCount1++;
+        }
+
+        //if (EPOC.BRAIN.metric == "exc")
+        //{
+        //    Debug.Log("Excited!");
+        //    exciteCount1++;
+        //}
+        //if (EPOC.BRAIN.metric == "lex")
+        //{
+        //    Debug.Log("LongEx!");
+        //    longExciteCount1++;
+        //}
+        //if (EPOC.BRAIN.metric == "str")
+        //{
+        //    Debug.Log("Stressed!");
+        //    stressCount1++;
+        //}
+        //if (EPOC.BRAIN.metric == "rel")
+        //{
+        //    Debug.Log("Relaxed!");
+        //    relaxCount1++;
+        //}
 
 
         Ball.AddForce(movement);

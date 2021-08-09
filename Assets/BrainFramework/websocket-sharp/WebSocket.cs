@@ -673,7 +673,7 @@ namespace WebSocketSharp
 
       _readyState = WebSocketState.Closed;
       try {
-        OnClose.Emit (this, e);
+                OnClose.Emit (this, e);
       }
       catch (Exception ex) {
         _logger.Fatal (ex.ToString ());

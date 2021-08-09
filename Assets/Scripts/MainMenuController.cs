@@ -2,14 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 //using UnityEditor;
 public class MainMenuController : MonoBehaviour
 {
     public GameObject Panel;
+    public GameObject DifficultyToggles;
+    public static string gameMode = "Hard";
 
     public void Start()
     {
         Panel.SetActive(false);
+        SetDifficultyMode.Difficulty = SetDifficultyMode.Difficulties.Hard;
+        DifficultyToggles.transform.GetChild((int)SetDifficultyMode.Difficulty).GetComponent<Toggle>().isOn = true;
+        
     }
     public void OpenPanel()
     {
@@ -47,4 +53,25 @@ public class MainMenuController : MonoBehaviour
             //}
         }
     }
+
+    #region Difficulty
+    public void SetEasyDifficulty(bool isOn)
+    {
+        if (isOn)
+        {
+            SetDifficultyMode.Difficulty = SetDifficultyMode.Difficulties.Easy;
+            gameMode = "Easy";
+        }
+            
+    }
+    public void SetHardDifficulty(bool isOn)
+    {
+        if (isOn)
+        {
+            SetDifficultyMode.Difficulty = SetDifficultyMode.Difficulties.Hard;
+            gameMode = "Hard";
+        }
+            
+    }
+    #endregion
 }

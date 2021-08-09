@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 57b341647b91c2d4f85e3022eaad34f3
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - BrainFramework: {fileID: 3350403608146669890, guid: 59ee50a035ecd4d1a83410959eca806b, type: 3}
+  - realEnemyCollection: {instanceID: 0}
+  - playerMovement: {instanceID: 0}
+  - chase: {instanceID: 0}
+  - smileOnIndicator: {instanceID: 0}
+  - smileOffIndicator: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
